@@ -1,0 +1,53 @@
+.request {
+  padding: 120px 0;
+  background-color: #f4f4f6;
+  &__container {
+    @include flex;
+  }
+  &__form{
+    margin-right: 135px;
+  }
+}
+
+.choosing {
+  max-width: 570px;
+  &__text {
+    margin-bottom: 30px;
+  }
+}
+.choosing-item {
+  position: relative;
+  display: flex;
+  padding: 15px 54px 15px 20px;
+  cursor: pointer;
+  transition: background-color .2s linear, box-shadow .2s linear, border-radius .2s linear;
+
+  &:hover {
+    background-color: $white;
+    box-shadow: 0px 20px 100px rgba(17, 28, 49, 0.15);
+    border-radius: 5px;
+    .choosing-item__img {
+      fill:$accent;
+    }
+    .choosing-item__title {
+      color: $accent;
+    }
+  }
+  &__svg {
+    margin-right: 14px;
+  }
+  &__img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    fill:$dark;
+    transition: fill .2s linear;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 30px;
+    @extend %public-700;
+    margin-bottom: 8px;
+    transition:  color .2s linear;
+  }
+}

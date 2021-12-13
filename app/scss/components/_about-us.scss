@@ -1,0 +1,100 @@
+.about-us {
+  padding-top: 123px;
+  padding-bottom: 114px;
+  &__container{
+    @include flex-v-center;
+  }
+  &__images {
+    position: relative;
+    max-width: 565px;
+    transform: translate(-15px, -5px);
+    margin-right: 34px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 41%;
+      left: -47%;
+      border: 1px solid $accent;
+      border-radius: 30px;
+      width: 350px;
+      height: 350px;
+      transform: rotate(45deg) translateY(-50%);
+      z-index: -1;
+    }
+  }
+  &__link {
+    display: block;
+    width: 565px;
+    height: 565px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+  }
+  &__years {
+    position: absolute;
+    bottom: 46px;
+    right: 5px;
+    padding: 19px 16px;
+    border-radius: 5px;
+    background-color: $white;
+  }
+  &__number {
+    @extend %public-700;
+    display: block;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 10px;
+    color: $accent;
+  }
+  &__descr {
+    letter-spacing: 0.0025em;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__text {
+   margin-bottom: 15px;
+  }
+  &__author {
+    padding-top: 49px;
+  }
+}
+
+.author {
+  @include flex-all-sb;
+  &__img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  &__name {
+    font-size: 18px;
+    line-height: 28px;
+    color: #111C31;
+    @extend %public-700;
+  }
+  &__profession {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    @extend %public-400;
+    color: $default;
+  }
+  &__signa {
+    width: 150px;
+    height: 76px;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,15 @@
+.top-page {
+  position: relative;  background-image: url('../images/top-page.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 205px 0 232px;
+  &__title {
+    @extend %public-800;
+    font-size: 64px;
+    margin-bottom: 15px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: -0.065em;
+  }
+}

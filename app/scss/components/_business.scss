@@ -1,0 +1,32 @@
+.business {
+  background-color: #f4f4f6;
+  padding: 120px 0 120px;
+  &__top {
+    max-width: 530px;
+    text-align: center;
+    margin: 0 auto 140px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    .choosing-item{
+      flex-direction: column;
+      padding: 30px;
+      background-color: $white;
+      text-align: center;
+    }
+    .choosing__item {
+      &:nth-child(2n + 1) {
+        transform: translateY(-70px);
+      }
+    }
+    .choosing-item__svg {
+      margin-bottom: 14px;
+    }
+    .choosing-item__title {
+      margin-bottom: 14px;
+    }
+  }
+}
+

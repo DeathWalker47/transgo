@@ -1,0 +1,193 @@
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  color: $default;
+  @extend %public-400;
+}
+
+// Класс, для того, чтоб страница не скроллилась после открытия меню
+body.hidden {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.subtitle {
+  color: $accent;
+  margin-bottom: 15px;
+  &__right {
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after{
+      position: absolute;
+      content: '';
+      background-color: $accent;
+      left: 10px;
+    }
+    &::before {
+      width: 40px;
+      height: 1px;
+      bottom: 6px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 1px;
+      bottom: 0;
+    }
+  }
+  &__left{
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after{
+      position: absolute;
+      content: '';
+      background-color: $accent;
+      right: 10px;
+    }
+    &::before {
+      width: 40px;
+      height: 1px;
+      bottom: 6px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 1px;
+      bottom: 0;
+    }
+  }
+}
+
+.title {
+  @extend %public-700;
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 46px;
+  color: $white;
+}
+
+.title--dark {
+  color: $dark;
+}
+
+.title--center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid $accent;
+  border-radius: 5px;
+  padding: 16px 29px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.0125em;
+  text-align: center;
+  color: $white;
+  background-color: transparent;
+  transition: background-color 0.3s linear, opacity 0.1s linear;
+  cursor: pointer;
+  @extend %public-600;
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+}
+
+.btn--fill {
+  background-color: $accent;
+
+  &:hover {
+    background-color:rgba($color: $accent, $alpha: .7)
+  }
+}
+
+.btn--dark {
+  border-color: transparent;
+  background-color: $dark
+}
+
+.play {
+  @include flex-all-center;
+  border-radius: 50%;
+  background-color: $white;
+  width: 50px;
+  height: 50px;
+  &__img{
+    width: 20px;
+    height: 24px;
+    object-fit: cover;
+  }
+}
+
+.list-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  &--gap{
+    gap: 30px;
+  }
+}
+
+.breadcrumbs {
+
+  &__list {
+    @include flex-all-center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      padding-right: 22px;
+      &::before {
+        position: absolute;
+        content: '/';
+        top: 0;
+        right: 10px;
+        color: $white;
+      }
+    }
+   
+  }
+  &__link {
+    color: $white;
+  }
+  &__link--active {
+    color: $accent;
+  }
+}

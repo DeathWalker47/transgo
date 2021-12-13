@@ -1,0 +1,37 @@
+$title: #fff;
+$accent: #f73425;
+$accent-hover: #ef5448;
+$white: #fff;
+$default: #565e6a;
+$dark: #000c23;
+$gray: #e1e5e5;
+%public-400 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+%public-600 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+%public-700 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+%public-800 {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+// %burger-width{
+//   width: ;
+// }
+// %burger-height{
+//   height: ;
+// }
+// %burger-line-height{
+//   height: ;
+// }

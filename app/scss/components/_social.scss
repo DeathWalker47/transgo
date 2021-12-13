@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  &__item {
+    border-radius: 50%;
+    background-color: rgba($color: $white, $alpha: .2);
+    margin-right: 10px;
+    transition: background-color .3s linear;
+    &:hover {
+      background-color: $accent;
+    }
+  }
+  &__link {
+    @include flex-all-center;
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,21 @@
+.pages{ 
+  .info-numbers {
+    padding: 108px 0 118px;
+  }
+  .info-numbers--bg { 
+    background-image: none;
+  
+    &::before {
+      display: none;
+    }
+    .info-numbers__num {
+      color: $dark;
+    }
+    .info-numbers__descr {
+      color: $default;
+    }
+  }
+  .about-us {
+    padding-bottom: 8px;
+  }
+}

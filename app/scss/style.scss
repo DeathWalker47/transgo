@@ -1,0 +1,47 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "mixins";
+@import "global";
+@import "media";
+
+
+// компоненты страницы
+@import "components/top-page";
+@import "components/form";
+@import "components/aside";
+
+// подключения компонентов страницы (большие компоненты)
+
+@import "components/header";
+
+
+@import "components/top";
+@import "components/about-us";
+@import "components/services";
+@import "components/request";
+@import "components/delivery";
+@import "components/info-numbers";
+@import "components/pricing";
+@import "components/faq";
+@import "components/reviews";
+@import "components/news";
+@import "components/partners";
+@import "components/about";
+@import "components/business";
+@import "components/quick-contact";
+@import "components/services-page";
+@import "components/skills";
+@import "components/services-single";
+
+
+@import "components/footer";
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "components/menu";
+@import "components/mini-info";
+@import "components/slider-btn";
+@import "components/footer-content";
+@import "components/social";
+

@@ -1,0 +1,25 @@
+.menu {
+  &__list {
+    @include flex-v-center;
+  }
+  &__list-item {
+    &:not(:last-child){
+      margin-right: 35px;
+    }
+  }
+  &__list-link {
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    color: $white;
+    transition: color 0.4s linear, opacity 0.4s linear;
+    @extend %public-600;
+    &--active {
+      color: $accent;
+    }
+
+    &:hover {
+      color: $accent;
+      opacity: .4;
+    }
+  }
+}

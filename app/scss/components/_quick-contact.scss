@@ -1,0 +1,53 @@
+.quick-contact {
+  position: relative;
+  background-image: url('../images/quick-contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -1px;
+  padding: 120px 0 118px;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000C23, $alpha: .8);
+    z-index: -1;
+  }
+  &__container {
+    @include flex-all-sb;
+  }
+  &__content {
+    max-width: 530px;
+  }
+  &__text {
+    color: $white;
+    margin-bottom: 40px;
+  }
+  &__btn {
+
+  }
+  &__form {
+    max-width: 570px;
+    width: 100%;
+    padding: 40px 50px 50px;
+
+    .form__input {
+      display: inline-block;
+      max-width: 225px;
+
+      &:nth-child(2n) {
+        margin-right: 14px;
+      }
+    }
+    .form__textarea {
+      max-width: 100%;
+      margin-bottom: 31px;
+    }
+  }
+}
+

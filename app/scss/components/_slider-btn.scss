@@ -1,0 +1,38 @@
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0px 20px 50px rgba(17, 28, 49, 0.2);
+  transition: background-color .2s ease-in-out;
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $accent;
+    .swiper-button-next__img,
+    .swiper-button-prev__img{
+      fill: $white
+    }
+  }
+}
+
+.swiper-button-prev{
+  left: -152px;
+  top: 49%;
+}
+
+.swiper-button-next{
+  right: -148px;
+  top: 49%;
+}
+
+.swiper-button-next__img, 
+.swiper-button-prev__img{ 
+  width: 12px;
+  height: 19px;
+  fill:$accent;
+  transition: fill .2s ease-in-out;
+}

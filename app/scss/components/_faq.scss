@@ -1,0 +1,103 @@
+.faq {
+  padding-bottom: 89px;
+  &__container {
+    @include flex-v-center;
+  }
+  &__images {
+    width: 570px;
+    height: 508px;
+    margin-right: 38px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 45px;
+  }
+  &__content {
+    max-width: 560px;
+  }
+  &__descr {
+    margin-bottom: 67px;
+  }
+}
+
+
+.accardeon {
+
+  &__item {
+    margin-bottom: 28px;
+    &--open{
+      .accardeon__content{
+        padding: 23px 20px;
+        opacity: 1;
+      }
+      .accardeon__box {
+        &::before {
+          transform: rotate(180deg);  
+        }
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &__control {
+    @include flex-all-sb;
+    width: 100%;
+    border: none;
+    background-color: $dark;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__title {
+    color: $white;
+    @extend %public-600;
+    padding: 10px 21px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__box {
+    position: relative;
+    display: block;
+    margin-right: -1px;
+    background-color: $accent;
+    width: 80px;
+    padding: 23px 40px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 38% 100%);
+    &::before {
+     position: absolute;
+     content: '';
+     top: 50%;
+     transform: translateY(-50%);
+     right: 26px;
+     background-color: $white;
+     width: 14px;
+     height: 2px;  
+     transition: all .3s linear;   
+    }
+    &::after {
+     position: absolute;
+     content: '';
+     top: 50%;
+     transform: translateY(-50%);
+     right: 32px;
+     background-color: $white;
+     width: 2px;
+     height: 14px; 
+     transition: all .3s linear;  
+    }
+  }
+  &__content {
+    // padding: 23px 20px;
+    border: 1px solid #D8DEE8;
+    border-top: none;
+    max-height: 0px;
+    will-change: max-height;
+    overflow: hidden;
+    padding: 0 23px;
+    opacity: 0;
+    transition: all .3s linear;
+    box-sizing: content-box;
+  }
+}

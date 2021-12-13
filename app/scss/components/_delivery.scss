@@ -1,0 +1,27 @@
+.delivery {
+  @include bg-cover;
+  padding: 46px 0 46px;
+  background-image: url('../images/delivery-bg.jpg');
+  &__container {
+    @include flex-v-center;
+  }
+  &__content {
+    max-width: 530px;
+    margin-right: 169px;
+  }
+  &__title {
+
+  }
+  &__descr {
+    margin-bottom: 40px;
+    color: $white;
+  }
+  &__btn {
+
+  }
+  &__img {
+    width: 464px;
+    height: 406px;
+    object-fit: cover;
+  }
+}

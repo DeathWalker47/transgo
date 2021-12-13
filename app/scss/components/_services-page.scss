@@ -1,0 +1,35 @@
+.services-page {
+  .services { 
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
+  .services-item {
+    border-color: #BDBDBD;
+    transition: background-color .2s linear, border-color .2s linear;
+
+    &:hover {
+      border-color: $accent;
+      background-color: $accent;
+      .descr-info__title,
+      .descr-info__text {
+        color: $white;
+      }
+      .services-item__img {
+        fill: $white;
+        stroke: $white;
+      }
+    }
+  }
+
+  .descr-info__title,
+  .services__title {
+    color: $dark;
+  }
+  .services__descr,
+  .descr-info__text {
+    color: $default;
+  }
+}
