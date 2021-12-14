@@ -50,6 +50,8 @@ new Swiper('.news-swiper',{
     prevEl: '.swiper-button-prev',
   },
  });
+
+ 
  const item = document.querySelectorAll('.progress__item')
 //  const line = document.querySelectorAll('.progress__line')
  item.forEach(el => { //проходимся по блоку
