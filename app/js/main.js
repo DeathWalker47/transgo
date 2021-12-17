@@ -9,10 +9,16 @@ accardeon.forEach(el => {
     const self = e.currentTarget;
     const content = self.querySelector('.accardeon__content');
 
+    // if(document.querySelector('.accardeon__content').classList.contains('initial')) {
+    //   document.querySelector('.initial').classList.remove('initial')
+    // }
+
+
     // Проходимся циклом по каждому аккардеону и убираем у всех у них класс опен
     document.querySelectorAll('.accardeon__item').forEach(el => {
       el.classList.remove('accardeon__item--open')
       el.querySelector('.accardeon__content').style.maxHeight = null;
+      // el.querySelector('.accardeon__content').classList.remove('initial');
     })
     
     self.classList.toggle('accardeon__item--open');
@@ -22,6 +28,9 @@ accardeon.forEach(el => {
     } else {
       content.style.maxHeight = null;
     }
+
+    // document.querySelector('.initial').classList.remove('initial')
+    
   })
 })
 

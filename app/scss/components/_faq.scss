@@ -24,6 +24,7 @@
 
 
 .accardeon {
+  transition: all .3s linear;
 
   &__item {
     margin-bottom: 28px;
@@ -31,6 +32,9 @@
       .accardeon__content{
         padding: 23px 20px;
         opacity: 1;
+
+        // С этим нужно быть остарожным
+        max-height: 160px;
       }
       .accardeon__box {
         &::before {
@@ -89,7 +93,6 @@
     }
   }
   &__content {
-    // padding: 23px 20px;
     border: 1px solid #D8DEE8;
     border-top: none;
     max-height: 0px;
@@ -100,4 +103,10 @@
     transition: all .3s linear;
     box-sizing: content-box;
   }
+}
+.initial {
+  max-height: inherit;
+  opacity: 1;
+  padding: 20px;
+  box-sizing: content-box;
 }
