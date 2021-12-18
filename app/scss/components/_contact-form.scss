@@ -1,0 +1,31 @@
+.contac-form {
+  padding-bottom: 116px;
+}
+
+.form-contact {
+  text-align: center;
+  padding: 50px;
+  &__title {
+    color: #00010B;
+    margin-bottom: 12px;
+  }
+  &__input {
+    display: inline-block;
+    max-width: 525px;
+    width: 100%;
+    padding: 11px 20px;
+    margin-bottom: 20px;
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
+  }
+  &__textarea {
+    height: 200px;
+    padding: 9px 28px;
+    margin-bottom: 27px;
+    resize: none;
+  }
+  &__btn {
+
+  }
+}
