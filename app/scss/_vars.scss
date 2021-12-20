@@ -35,3 +35,10 @@ $gray: #e1e5e5;
 // %burger-line-height{
 //   height: ;
 // }
+
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function mix($numbers...) {
+ @return m#{i}n(#{$numbers});
+}

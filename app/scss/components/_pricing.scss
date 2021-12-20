@@ -8,10 +8,6 @@
     max-width: 300px;
     margin-right: 20px;
   }
-  
-  &__list-item {
-
-  }
 }
 
 .pricing-list {
@@ -22,43 +18,69 @@
 
 .pricing-item {
   position: relative;
-  padding: 27px 27px 30px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0px 20px 100px rgba(17, 28, 49, 0.15);
+  perspective: 1000px;
   cursor: pointer;
   z-index: 1;
-
-  &::before {
-    @include bg-cover;
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/way-bg.jpg');
-    opacity: 0;
-    transition: opacity .2s linear;
-    z-index: -2;
-  }
-  &::after {
-    @include bg-cover;
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba($color: #111C31, $alpha: .85);
-    transition: opacity .2s linear;
-    z-index: -1;
-  }
   &:hover {
-    &::before,
-    &::after  {
-      opacity: 1;
+    .pricing-item__face {
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+    }
+    .pricing-item__back {
+      transform: rotateY(360deg);
+      &::before,
+      &::after  {
+        transform: rotateY(360deg);
+        transform: rotateY(360deg);
+      }
+    }
+  }
+  &__face {
+    padding: 27px 27px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 20px 100px rgba(17, 28, 49, 0.15);
+    transition: transform .8s ;
+  }
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    padding: 27px 27px 30px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform .8s ;
+    &::before {
+      @include bg-cover;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/way-bg.jpg');
+      transition: transform .9s ;
+      backface-visibility: hidden;
+      z-index: -2;
+      transform: rotateY(180deg);
+      
+    }
+    &::after {
+      @include bg-cover;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #111C31, $alpha: .85);
+      transition: transform .9s ;
+      backface-visibility: hidden;
+      z-index: -1;
+      transform: rotateY(180deg);
     }
     .pricing-item__titl{
       border-color: $white;
@@ -94,9 +116,6 @@
     font-size: 16px;
     line-height: 28px;
     @extend %public-400;
-  }
-  &__list {
-
   }
   &__item {
     position: relative;

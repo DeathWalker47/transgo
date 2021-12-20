@@ -18,32 +18,32 @@
     <nav class="menu header__menu">
       <ul class="menu__list">
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link menu__list-link--active">
+          <a href="index.html" class="menu__list-link menu__list-link--active">
             Home+
           </a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">
+          <a href="about-us.html" class="menu__list-link">
             About Us
           </a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">
+          <a href="services.html" class="menu__list-link">
             Services
           </a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">
+          <a href="services-single.html" class="menu__list-link">
             Pages+
           </a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">
+          <a href="blog-news.html" class="menu__list-link">
             News+
           </a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">
+          <a href="contact.html" class="menu__list-link">
             Contact Us
           </a>
         </li>
@@ -84,7 +84,7 @@ ut labore et dolore magna aliqua.
         <button class="top__btn btn btn--fill">
           Learn More
         </button>
-        <button class="top__btn btn">
+        <button class="top__btn btn top__btn-contact contact-popup">
           Contact Us
         </button>
       </div>
@@ -128,14 +128,34 @@ ut labore et dolore magna aliqua.
       </div>
     </div>
     <div class="top__video">
-      <a href="#" class="play top__play">
-        <svg class="play__img">
-          <use xlink:href="./images/sprite.svg#play"></use>
-        </svg>
-      </a>
+        <a  href="https://www.youtube.com/watch?v=q92DWs1MwRA" data-fancybox  class="play top__play">
+          <svg class="play__img">
+            <use xlink:href="./images/sprite.svg#play"></use>
+          </svg>
+        </a>
     </div>
   </div>
 </section>
+<!-- <section class="modals">
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="container modal__container">
+        <button class="modal__close">X</button>
+        <form action="#" class="form-contact form form--fill">
+          <h2 class="form-contact__title title">
+            Get In Touch
+          </h2>
+          <input type="text" class="form-contact__input form__input" placeholder="Name">
+          <input type="email" class="form-contact__input form__input" placeholder="Email">
+          <input type="tel" class="form-contact__input form__input" placeholder="Phome Number">
+          <input type="tel" class="form-contact__input form__input" placeholder="Subject">
+          <textarea class="form-contact__textarea form__input" name="Message" placeholder="Text Your Massage"></textarea>
+          <button type="submit" class="form-contact__btn btn btn--fill">Submit Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
       <section class="mini-info">
   <h2 class="mini-info__title visually-hidden" aria-hidden="true">Mini-info</h2>
   <div class="container">
@@ -200,10 +220,10 @@ ut labore et dolore magna aliqua.
       <section class="about-us">
   <div class="container about-us__container">
     <div class="about-us__images">
-      <a href="#" class="about-us__link">
+      <div class="about-us__link">
         <img src="./images/about-img.png" alt="">
-      </a>
-      <a href="#" class="play about-us__play">
+      </div>
+      <a href="https://youtu.be/vSB4ezjAdX8?t=107" data-fancybox class="play about-us__play">
         <svg class="play__img">
           <use xlink:href="./images/sprite.svg#play"></use>
         </svg>
@@ -462,9 +482,9 @@ ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam,
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <a href="#" class="delivery__btn btn btn--dark">
+      <button class="delivery__btn btn btn--dark contact-popup">
         Contact Us
-      </a>
+      </button>
     </div>
     <img src="./images/сourier.png" alt="сourier" class="delivery__img">
   </div>
@@ -536,86 +556,170 @@ ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam,
     <ul class="pricing__list pricing-list ">
       <li class="pricing-list__item">
         <article class="pricing-item">
-          <h3 class="pricing-item__titl title title--dark">
-            Basic Plan
-          </h3>
-          <p class="pricing-item__sum">
-            $132
-            <span class="pricing-item__month">/Per month</span>
-          </p>
-          <ul class="pricing-item__list">
-            <li class="pricing-item__item">
-              1 Warehouse
-            </li>
-            <li class="pricing-item__item">
-              3650 kg load
-            </li>
-            <li class="pricing-item__item">
-              125 kg / pallet load
-            </li>
-            <li class="pricing-item__item">
-              24/7 support
-            </li>
-          </ul>
-          <a href="#" class="pricing-item__link btn btn--dark">
-            Choose Plan
-          </a>
+          <div class="pricing-item__face">
+            <h3 class="pricing-item__titl title title--dark">
+              Basic Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $132
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
+          <div class="pricing-item__back">
+            <h3 class="pricing-item__titl title title--dark">
+              Basic Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $132
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
         </article>
       </li>
       <li class="pricing-list__item">
         <article class="pricing-item">
-          <h3 class="pricing-item__titl title title--dark">
-            Standart Plan
-          </h3>
-          <p class="pricing-item__sum">
-            $232
-            <span class="pricing-item__month">/Per month</span>
-          </p>
-          <ul class="pricing-item__list">
-            <li class="pricing-item__item">
-              1 Warehouse
-            </li>
-            <li class="pricing-item__item">
-              3650 kg load
-            </li>
-            <li class="pricing-item__item">
-              125 kg / pallet load
-            </li>
-            <li class="pricing-item__item">
-              24/7 support
-            </li>
-          </ul>
-          <a href="#" class="pricing-item__link btn btn--dark">
-            Choose Plan
-          </a>
+          <div class="pricing-item__face">
+            <h3 class="pricing-item__titl title title--dark">
+              Standard Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $232
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
+          <div class="pricing-item__back">
+            <h3 class="pricing-item__titl title title--dark">
+              Standard Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $232
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
         </article>
       </li>
       <li class="pricing-list__item">
         <article class="pricing-item">
-          <h3 class="pricing-item__titl title title--dark">
-            Advanced Plan
-          </h3>
-          <p class="pricing-item__sum">
-            $332
-            <span class="pricing-item__month">/Per month</span>
-          </p>
-          <ul class="pricing-item__list">
-            <li class="pricing-item__item">
-              1 Warehouse
-            </li>
-            <li class="pricing-item__item">
-              3650 kg load
-            </li>
-            <li class="pricing-item__item">
-              125 kg / pallet load
-            </li>
-            <li class="pricing-item__item">
-              24/7 support
-            </li>
-          </ul>
-          <a href="#" class="pricing-item__link btn btn--dark">
-            Choose Plan
-          </a>
+          <div class="pricing-item__face">
+            <h3 class="pricing-item__titl title title--dark">
+              Advanced Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $332
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
+          <div class="pricing-item__back">
+            <h3 class="pricing-item__titl title title--dark">
+              Advanced Plan
+            </h3>
+            <p class="pricing-item__sum">
+              $332
+              <span class="pricing-item__month">/Per month</span>
+            </p>
+            <ul class="pricing-item__list">
+              <li class="pricing-item__item">
+                1 Warehouse
+              </li>
+              <li class="pricing-item__item">
+                3650 kg load
+              </li>
+              <li class="pricing-item__item">
+                125 kg / pallet load
+              </li>
+              <li class="pricing-item__item">
+                24/7 support
+              </li>
+            </ul>
+            <a href="#" class="pricing-item__link btn btn--dark">
+              Choose Plan
+            </a>
+          </div>
         </article>
       </li>
     </ul>
@@ -918,6 +1022,26 @@ tempor incididunt ut labore et dolore magna aliqua.
         </a>
       </li>
     </ul>
+  </div>
+</section>
+      <section class="modals">
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="container modal__container">
+        <button class="modal__close">X</button>
+        <form action="#" class="form-contact form form--fill">
+          <h2 class="form-contact__title title">
+            Get In Touch
+          </h2>
+          <input type="text" class="form-contact__input form__input" placeholder="Name">
+          <input type="email" class="form-contact__input form__input" placeholder="Email">
+          <input type="tel" class="form-contact__input form__input" placeholder="Phome Number">
+          <input type="tel" class="form-contact__input form__input" placeholder="Subject">
+          <textarea class="form-contact__textarea form__input" name="Message" placeholder="Text Your Massage"></textarea>
+          <button type="submit" class="form-contact__btn btn btn--fill">Submit Now</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
     </main>

@@ -2,6 +2,51 @@ $(function(){
   
 });
 
+
+const btns = document.querySelectorAll('.contact-popup');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modal = document.querySelector('.modal');
+const btnClose = modal.querySelector('.modal__close')
+
+btns.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    console.log(e.currentTarget);
+    modal.classList.add('modal--visible')
+    modalOverlay.classList.add('modal-overlay--visible');
+    document.querySelector('body').classList.add('body-hidden')
+  })
+})
+
+
+
+modalOverlay.addEventListener('click', (e) => {
+  console.log(e.target);
+  if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
+    modalOverlay.classList.remove('modal-overlay--visible')
+    modal.classList.remove('modal--visible')
+    document.querySelector('body').classList.remove('body-hidden')
+  }
+})
+
+// const btns = document.querySelector('.contact-popup');
+// const modalOverlay = document.querySelector('.modal-overlay');
+// const modal = document.querySelector('.modal');
+// const btnClose = modal.querySelector('.modal__close')
+
+// btns.addEventListener('click', (e) => {
+//   console.log(e.currentTarget);
+//   modal.classList.add('modal--visible')
+//   modalOverlay.classList.add('modal-overlay--visible');
+// })
+
+// modalOverlay.addEventListener('click', (e) => {
+//   console.log(e.target);
+//   if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
+//     modalOverlay.classList.remove('modal-overlay--visible')
+//     modal.classList.remove('modal--visible')
+//   }
+// })
+
 let accardeon = document.querySelectorAll('.accardeon__item');
 
 accardeon.forEach(el => {
