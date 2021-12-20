@@ -71,7 +71,12 @@
       left: 13px;
     }
   }
- 
+  &__title {
+    transition: color .2s linear;
+    &:hover {
+      color: $accent-hover;
+    }
+  }
   &__text {
     margin-bottom: 30px;
   }

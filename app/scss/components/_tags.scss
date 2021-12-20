@@ -1,0 +1,32 @@
+
+.tags {
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+  }
+  &__title {
+    margin-bottom: 22px;
+  }
+  &__label {
+    display: block;
+    cursor: pointer;
+  }
+  &__input {
+    &:checked+.tags__checkbox {
+      border-color: $accent;
+      background-color: $accent-hover;
+      color: $white;
+    }
+  }
+  &__checkbox {
+    position: relative;
+    display: block;
+    padding: 6px 14px 6px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+

@@ -6,46 +6,26 @@ $(function(){
 const btns = document.querySelectorAll('.contact-popup');
 const modalOverlay = document.querySelector('.modal-overlay');
 const modal = document.querySelector('.modal');
-const btnClose = modal.querySelector('.modal__close')
+const btnClose = document.querySelector('.modal__close');
 
 btns.forEach((el) => {
   el.addEventListener('click', (e) => {
-    console.log(e.currentTarget);
     modal.classList.add('modal--visible')
     modalOverlay.classList.add('modal-overlay--visible');
     document.querySelector('body').classList.add('body-hidden')
   })
-})
+});
 
-
-
-modalOverlay.addEventListener('click', (e) => {
-  console.log(e.target);
+if(modalOverlay) {
+  modalOverlay.addEventListener('click', (e) => {
   if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
     modalOverlay.classList.remove('modal-overlay--visible')
     modal.classList.remove('modal--visible')
     document.querySelector('body').classList.remove('body-hidden')
   }
-})
+});
+}
 
-// const btns = document.querySelector('.contact-popup');
-// const modalOverlay = document.querySelector('.modal-overlay');
-// const modal = document.querySelector('.modal');
-// const btnClose = modal.querySelector('.modal__close')
-
-// btns.addEventListener('click', (e) => {
-//   console.log(e.currentTarget);
-//   modal.classList.add('modal--visible')
-//   modalOverlay.classList.add('modal-overlay--visible');
-// })
-
-// modalOverlay.addEventListener('click', (e) => {
-//   console.log(e.target);
-//   if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
-//     modalOverlay.classList.remove('modal-overlay--visible')
-//     modal.classList.remove('modal--visible')
-//   }
-// })
 
 let accardeon = document.querySelectorAll('.accardeon__item');
 
@@ -54,16 +34,10 @@ accardeon.forEach(el => {
     const self = e.currentTarget;
     const content = self.querySelector('.accardeon__content');
 
-    // if(document.querySelector('.accardeon__content').classList.contains('initial')) {
-    //   document.querySelector('.initial').classList.remove('initial')
-    // }
-
-
     // Проходимся циклом по каждому аккардеону и убираем у всех у них класс опен
     document.querySelectorAll('.accardeon__item').forEach(el => {
       el.classList.remove('accardeon__item--open')
       el.querySelector('.accardeon__content').style.maxHeight = null;
-      // el.querySelector('.accardeon__content').classList.remove('initial');
     })
     
     self.classList.toggle('accardeon__item--open');
@@ -73,8 +47,6 @@ accardeon.forEach(el => {
     } else {
       content.style.maxHeight = null;
     }
-
-    // document.querySelector('.initial').classList.remove('initial')
     
   })
 })
@@ -108,6 +80,7 @@ new Swiper('.news-swiper',{
  
  const item = document.querySelectorAll('.progress__item')
 //  const line = document.querySelectorAll('.progress__line')
+console.log(item);
  item.forEach(el => { //проходимся по блоку
 
   let line = el.querySelector('.progress__line')

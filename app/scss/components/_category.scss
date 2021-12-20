@@ -1,0 +1,45 @@
+.category {
+  &__label {
+    display: block;
+    cursor: pointer;
+  }
+  &__input {
+    &:checked+.category__checkbox {
+      background-color: $accent-hover;
+      color: $white;
+      &::before,
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
+  &__checkbox {
+    position: relative;
+    display: block;
+    padding: 13px 18px 11px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 26px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 21px;
+      right: 22px;
+      width: 8px;
+      height: 2px;
+      background-color: $default;
+      transform: rotate(45deg);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 22px;
+      right: 22px;
+      width: 8px;
+      height: 2px;
+      background-color: $default;
+      transform: rotate(-45deg);
+    }
+  }
+}

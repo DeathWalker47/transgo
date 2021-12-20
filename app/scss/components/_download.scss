@@ -1,0 +1,36 @@
+
+.download {
+
+  &__link {
+    @include flex-v-center;
+    position: relative;
+    display: block;
+    padding: 13px 18px 11px;
+    padding-left: 40px;
+    background-color: $accent-hover;
+    border-radius: 5px;
+    color: $white;
+    font-size: 16px;
+    transition: all .3s linear;
+    @extend %public-600;
+    line-height: 26px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: 19px;
+      width: 12px;
+      height: 16px;
+      background-image: url('../images/icons/download.svg');
+    }
+    
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
