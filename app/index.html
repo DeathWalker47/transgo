@@ -55,6 +55,9 @@
             <svg class="cup__search-img cup__img">
               <use xlink:href="./images/sprite.svg#search"></use>
             </svg>
+            <svg class="cup__search-close cup__img">
+              <use xlink:href="./images/sprite.svg#close-btn"></use>
+            </svg>
           </button>
           <a href="#" class="cup__basket-link cup__item">
             <svg class="cup__basket-img cup__img">
@@ -68,6 +71,22 @@
       </button>
     </div>
   </div>
+    <div class="search-container">
+      <audio controls class="audio-search visually-hidden">
+        <source src="./images/alert.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls class="audio-search audio-active visually-hidden">
+        <source src="./images/alert2.mp3" type="audio/mpeg">
+      </audio>
+      <form action="#" class="search">
+        <input type="text" class="search__input form__input form__input--fill " placeholder="Search">
+        <button class="btn btn--fill search__btn">
+          <svg class="search__btn-img">
+            <use xlink:href="./images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
 </header>
     <main class="main">
       <section class="top">

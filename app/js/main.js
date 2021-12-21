@@ -2,6 +2,22 @@ $(function(){
   
 });
 
+ const searchBtn = document.querySelector('.cup__search-btn');
+ const searchForm = document.querySelector('.search-container');
+ const audioSearch = document.querySelectorAll('.audio-search');
+
+ searchBtn.addEventListener('click', () => {
+   document.querySelector('.cup__search-img').classList.toggle('none')
+   document.querySelector('.cup__search-close').classList.toggle('block')
+  searchForm.classList.toggle('active');
+  audioSearch.forEach(el => {
+    el.classList.toggle('audio-active');
+    if(el.classList.contains('audio-active')) {
+      el.play();
+    }
+  })
+ })
+
 
 const btns = document.querySelectorAll('.contact-popup');
 const modalOverlay = document.querySelector('.modal-overlay');
