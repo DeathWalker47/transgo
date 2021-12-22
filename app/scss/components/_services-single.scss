@@ -17,7 +17,10 @@
   }
   &__images {
     position: relative;
+    width: 770px;
+    height: 400px;
     margin-bottom: 30px;
+    border-radius: 5px;
     overflow: hidden;
     &--air {
       &::before {
@@ -45,7 +48,7 @@
     margin-bottom: 15px;
   }
   &__box {
-    @include flex-v-center;
+    @include flex;
     margin-bottom: 30px;
   }
   &__box-img {
@@ -56,8 +59,13 @@
     border-radius: 8px;
     overflow: hidden;
   }
+  &__box-images {
+    display: flex;
+  }
   &__list {
-
+    max-height: 110px;
+    transition: 0.2s linear;
+    overflow: hidden;
   }
   &__item {
     position: relative;
@@ -77,6 +85,28 @@
       height: 10px;
       border-radius: 50%;
       background-color: $accent;
+    }
+  }
+  &__load-more {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    transition: color .2s linear;
+    color: $dark;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 2em;
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        background-image: linear-gradient(to bottom,rgba(255,255,255,0),#fff);
+    }
+    &:hover {
+      color: $accent-hover;
     }
   }
 }
