@@ -1,8 +1,8 @@
-@mixin burder {
+@mixin burger {
     position: relative;
     border: none;
     padding: 0;
-    width: 40px;
+    // width: 40px;
     @extend %burger-width;
     @extend %burger-height;
     background-color: transparent;

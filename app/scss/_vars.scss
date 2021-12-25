@@ -26,15 +26,15 @@ $gray: #e1e5e5;
   font-style: normal;
 }
 
-// %burger-width{
-//   width: ;
-// }
-// %burger-height{
-//   height: ;
-// }
-// %burger-line-height{
-//   height: ;
-// }
+%burger-width{
+  width: 30px ;
+}
+%burger-height{
+  height: 30px ;
+}
+%burger-line-height{
+  height: 2px ;
+}
 
 @function max($numbers...) {
  @return m#{a}x(#{$numbers});

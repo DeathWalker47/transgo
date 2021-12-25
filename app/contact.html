@@ -16,9 +16,15 @@
     <header class="header">
   <div class="container header__container">
     <a href="#" class="logo">
-      <img src="./images/logo.png" alt="logo">
+      <picture >
+        <source srcset="./images/logo-footer.png" media="(max-width:1200px)">
+        <img src="./images/logo.png" alt="logo">
+      </picture>
     </a>
     <nav class="menu header__menu">
+      <button class="burger">
+        <span class="burger__list"></span>
+      </button>
       <ul class="menu__list">
         <li class="menu__list-item">
           <a href="index.html" class="menu__list-link menu__list-link--active">
