@@ -16,9 +16,27 @@
     padding: 7px 15px;
     font-size: 14px;
   }
+  .about-us__container {
+    flex-direction: column;
+  }
+  .about-us__images {
+    order: 1;
+    margin-right: 0;
+    &::before {
+      display: none;
+    }
+  }
+  .about-us__content {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width:992px) {
+  //Паддинги 
+  .mini-info,
+  .about-us {
+    padding-top: 80px;
+  }
   .header__menu {
     order: 1;
   }
@@ -70,6 +88,12 @@
   .top__video {
     display: none;
   }
+
+ 
+  .list-grid {
+    grid-template-columns: repeat(auto-fill, 390px);
+    justify-content: center;
+  }
 }
 
 @media (max-width:768px) {
@@ -89,9 +113,22 @@
     line-height: 28px;
     margin-bottom: 5px;
   }
+  .about-us__link {
+    width: 450px;
+    height: 450px;
+  } 
+  .about-us__author {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width:576px) {
+  //Паддинги
+  .mini-info,
+  .about-us {
+    padding-top: 50px;
+  }
+
   .header__container {
     align-items: flex-start;
   }
@@ -111,7 +148,37 @@
   .header__menu {
     margin-left: 20px;
   }
+  .descr-info {
+    padding: 20px 20px;
+  }
+  .descr-info__img {
+    margin-bottom: 5px;
+  }
+  .descr-info__text {
+    margin-bottom: 25px;
+  }
+  .list-grid {
+    grid-template-columns: repeat(auto-fill, 290px);
+  }
+  .about-us__link {
+    width: 350px;
+    height: 350px;
+  }
+  .about-us__years {
+    bottom: 0;
+    padding: 14px 12px;
+    box-shadow: 0px 20px 100px rgba(17, 28, 49, 0.15);
+  }
+  .about-us__play {
+    width: 60px;
+    height: 60px;
+  }
+  .about-us__images {
+    max-width: 100%;
+    transform: translate(0, 0);
+  }
 }
+
 @media (max-width:420px) {
   .header {
     padding-top: 20px;
@@ -165,9 +232,32 @@
   .top__descr {
     font-size: 14px;
   }
+  .author {
+    margin-bottom: 10px;
+  }
+  .about-us__author {
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .about-us__content {
+    margin-bottom: 10px;
+  }
+  .about-us {
+    padding-bottom: 80px;
+  }
+  .about-us__number {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 360px) {
+  .title {
+    font-size: 30px;
+    line-height: 36px;
+  }
   .top__content {
     max-width: 100%;
     padding-top: 40%;
@@ -178,5 +268,12 @@
   }
   .form__input {
     padding: 8px 12px;
+  }
+  .about-us__link {
+    width: 300px;
+    height: 300px;
+  }
+  .about-us__years {
+    bottom: -24px;
   }
 }
