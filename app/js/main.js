@@ -52,8 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
       counter4 === 4 ? clearInterval(interval5) : false;
   }, ms)
   }
+
+  if(document.querySelector('.info-numbers__list')) {
+    counter(10);
+  }
   
-  counter(10);
+  
   
 //Открытие формы поиска и музыкальное сопровождение
  const searchBtn = document.querySelector('.cup__search-btn');
@@ -187,31 +191,31 @@ console.log(item);
  
 
 // Яндекс карта
-// function init(){
-//   let map = new ymaps.Map("map", {
-//     center: [39.43754855860376,-101.36742088474497],
-//     zoom: 6,
-//   });
+function init(){
+  let map = new ymaps.Map("map", {
+    center: [39.43754855860376,-101.36742088474497],
+    zoom: 6,
+  });
  
-//   map.controls.remove('geolocationControl'); // удаляем геолокацию
-//    map.controls.remove('searchControl'); // удаляем поиск
-//    map.controls.remove('trafficControl'); // удаляем контроль трафика
-//    map.controls.remove('typeSelector'); // удаляем тип
-//    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-//    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-//    map.controls.remove('rulerControl'); // удаляем контрол прави
-//   let placemark = new ymaps.Placemark([39.43754855860376,-101.36742088474497], {
-//     hintContent: 'Кастомная метка',
-//     balloonContent: 'Это красивая метка'
-//   }, {
-//     iconLayout: 'default#image',
-//     iconImageHref: './images/icons/contact-marker.svg',
-//     iconImageSize: [30, 40],
-//     iconImageOffset: [-5, -34],
-//   })
-//   map.geoObjects.add(placemark);
-// }
-// ymaps.ready(init);
+  map.controls.remove('geolocationControl'); // удаляем геолокацию
+   map.controls.remove('searchControl'); // удаляем поиск
+   map.controls.remove('trafficControl'); // удаляем контроль трафика
+   map.controls.remove('typeSelector'); // удаляем тип
+   map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+   map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+   map.controls.remove('rulerControl'); // удаляем контрол прави
+  let placemark = new ymaps.Placemark([39.43754855860376,-101.36742088474497], {
+    hintContent: 'Кастомная метка',
+    balloonContent: 'Это красивая метка'
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: './images/icons/contact-marker.svg',
+    iconImageSize: [30, 40],
+    iconImageOffset: [-5, -34],
+  })
+  map.geoObjects.add(placemark);
+}
+ymaps.ready(init);
 
 
 });
