@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuList = document.querySelector('.menu__list');
   btnMenu.addEventListener('click', () => {
     menuList.classList.toggle('active');
+    document.querySelector('body').classList.toggle('body-hidden')
   })
-
-
 
   //Кнопка показать весь текст
   let heightList = document.querySelector(".article__list");
