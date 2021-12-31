@@ -649,9 +649,9 @@
       font-size: 30px;
       line-height: 40px;
     }
-    .form-contact__textarea {
-      height: 130px;
-    }
+  }
+  .form-contact__textarea {
+    height: 130px;
   }
 }
 
@@ -862,6 +862,24 @@
     height: 80px;
     background-size: 40%;
   }
+  // .form-contact__input {
+  //   display: inline-block;
+  //   max-width: 525px;
+  //   width: 100%;
+  //   padding: 6px 10px;
+  //   margin-bottom: 13px;
+  // }
+  .form__input {
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+  .modal__close {
+    right: 25px;
+    top: 10px;
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -902,5 +920,11 @@
   .news-blog__images,
   .article__images {
     height: 180px;
+  }
+  .about-us {
+    padding-top: 20px;
+  }
+  .mini-info {
+    padding-bottom: 20px;
   }
 }

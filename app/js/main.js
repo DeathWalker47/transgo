@@ -75,90 +75,90 @@ document.addEventListener('DOMContentLoaded', () => {
   })
  })
 
-// Появление модального окна
-const btns = document.querySelectorAll('.contact-popup');
-const modalOverlay = document.querySelector('.modal-overlay');
-const modal = document.querySelector('.modal');
-const btnClose = document.querySelector('.modal__close');
+  // Появление модального окна
+  const btns = document.querySelectorAll('.contact-popup');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const modal = document.querySelector('.modal');
+  const btnClose = document.querySelector('.modal__close');
 
-btns.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    modal.classList.add('modal--visible')
-    modalOverlay.classList.add('modal-overlay--visible');
-    document.querySelector('body').classList.add('body-hidden')
-  })
-});
-
-if(modalOverlay) {
-  modalOverlay.addEventListener('click', (e) => {
-  if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
-    modalOverlay.classList.remove('modal-overlay--visible')
-    modal.classList.remove('modal--visible')
-    document.querySelector('body').classList.remove('body-hidden')
-  }
-});
-}
-
-// Аккардео
-let accardeon = document.querySelectorAll('.accardeon__item');
-
-accardeon.forEach(el => {
-  el.addEventListener('click', (e) => {
-    const self = e.currentTarget;
-    const content = self.querySelector('.accardeon__content');
-
-    // Проходимся циклом по каждому аккардеону и убираем у всех у них класс опен
-    document.querySelectorAll('.accardeon__item').forEach(el => {
-      el.classList.remove('accardeon__item--open')
-      el.querySelector('.accardeon__content').style.maxHeight = null;
+  btns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      modal.classList.add('modal--visible')
+      modalOverlay.classList.add('modal-overlay--visible');
+      document.querySelector('body').classList.add('body-hidden')
     })
-    
-    self.classList.toggle('accardeon__item--open');
+  });
 
-    if(self.classList.contains('accardeon__item--open')) {
-      content.style.maxHeight = content.scrollHeight + 'px';
-    } else {
-      content.style.maxHeight = null;
+  if(modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+    if(e.target == modalOverlay || e.target == modal || e.target == btnClose) {
+      modalOverlay.classList.remove('modal-overlay--visible')
+      modal.classList.remove('modal--visible')
+      document.querySelector('body').classList.remove('body-hidden')
     }
-    
-  })
-})
-
-// Свайпер
-new Swiper('.reviews-swiper',{
-  loop:true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  spaceBetween: 30,
-  speed: 800,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
- });
-
-new Swiper('.news-swiper',{
-  loop:true,
-  // slidesPerView: 2,
-  spaceBetween: 30,
-  speed: 800,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    1200: {
-      slidesPerView: 2,
-      spaceBetween: 30
-    },
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    }
+  });
   }
- });
+
+  // Аккардеон
+  let accardeon = document.querySelectorAll('.accardeon__item');
+
+  accardeon.forEach(el => {
+    el.addEventListener('click', (e) => {
+      const self = e.currentTarget;
+      const content = self.querySelector('.accardeon__content');
+
+      // Проходимся циклом по каждому аккардеону и убираем у всех у них класс опен
+      document.querySelectorAll('.accardeon__item').forEach(el => {
+        el.classList.remove('accardeon__item--open')
+        el.querySelector('.accardeon__content').style.maxHeight = null;
+      })
+
+      self.classList.toggle('accardeon__item--open');
+
+      if(self.classList.contains('accardeon__item--open')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = null;
+      }
+
+    })
+  })
+
+  // Свайпер
+  new Swiper('.reviews-swiper',{
+    loop:true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 30,
+    speed: 800,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+   });
+
+  new Swiper('.news-swiper',{
+    loop:true,
+    // slidesPerView: 2,
+    spaceBetween: 30,
+    speed: 800,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
+    }
+   });
 
 
 
