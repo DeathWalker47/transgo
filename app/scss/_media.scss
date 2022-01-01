@@ -884,6 +884,12 @@
     top: 10px;
     font-size: 40px;
   }
+  .search-container .search {
+    height: 40px;
+  }
+  .search__btn {
+    margin-left: -2px;
+  }
 }
 
 @media (max-width: 360px) {
