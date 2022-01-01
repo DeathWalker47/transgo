@@ -719,6 +719,9 @@
   .top__descr {
     font-size: 14px;
   }
+
+ 
+
   .author {
     margin-bottom: 10px;
   }
@@ -871,10 +874,11 @@
   // }
   .form__input {
     padding: 6px 10px;
-    border-radius: 5px;
     margin-bottom: 13px;
-}
-
+  }
+  .search__input {
+    margin-bottom: 0;
+  }
   .modal__close {
     right: 25px;
     top: 10px;
