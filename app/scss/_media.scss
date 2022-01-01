@@ -563,9 +563,14 @@
       padding: 7px 16px;
       font-size: 15px;
       line-height: 20px;
+      height: 40px;
+      top: 0;
+      right: -2px;
     }
   }
-
+  .footer-content__input-box {
+    padding-top: 0;
+  }
   .footer-copy {
     padding: 15px 0;
   }
@@ -865,13 +870,6 @@
     height: 80px;
     background-size: 40%;
   }
-  // .form-contact__input {
-  //   display: inline-block;
-  //   max-width: 525px;
-  //   width: 100%;
-  //   padding: 6px 10px;
-  //   margin-bottom: 13px;
-  // }
   .form__input {
     padding: 6px 10px;
     margin-bottom: 13px;
@@ -893,6 +891,13 @@
   .search__btn {
     margin-left: -2px;
     height: 40px;
+  }
+  .scroll-top {
+    bottom: 20px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $accent;
   }
 }
 
@@ -940,5 +945,11 @@
   }
   .mini-info {
     padding-bottom: 20px;
+  }
+  .scroll-top {
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #f73425;
   }
 }

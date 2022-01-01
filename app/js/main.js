@@ -215,8 +215,32 @@ function init(){
   map.geoObjects.add(placemark);
 }
 ymaps.ready(init);
-
-
 });
 
-  
+
+// Плавный скролл наверх
+const target = document.querySelector("footer");
+const scrollToTopBtn = document.querySelector(".scroll-top");
+const rootElement = document.documentElement;
+
+function callback(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      scrollToTopBtn.classList.add("scroll-top--active");
+    } else {
+      scrollToTopBtn.classList.remove("scroll-top--active");
+    }
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+let observer = new IntersectionObserver(callback);
+observer.observe(target);
+

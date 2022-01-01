@@ -28,11 +28,6 @@
     }
     .pricing-item__back {
       transform: rotateY(360deg);
-      // &::before,
-      // &::after  {
-      //   transform: rotateY(360deg);
-      //   transform: rotateY(360deg);
-      // }
     }
   }
   &__face {
@@ -57,34 +52,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // &::before {
-    //   @include bg-cover;
-    //   position: absolute;
-    //   content: '';
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-image: url('../images/way.jpg');
-    //   transition: transform .8s ;
-    //   backface-visibility: hidden;
-    //   z-index: -2;
-    //   transform: rotateY(180deg);
-    // }
-    // &::after {
-    //   @include bg-cover;
-    //   position: absolute;
-    //   content: '';
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-color: rgba($color: #111C31, $alpha: .85);
-    //   transition: transform .9s ;
-    //   backface-visibility: hidden;
-    //   z-index: -1;
-    //   transform: rotateY(180deg);
-    // }
     .pricing-item__titl{
       border-color: $white;
       color: $white;
